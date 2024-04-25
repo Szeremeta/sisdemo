@@ -1,38 +1,102 @@
 .App {
-  text-align: center;
+  text-align: left;
+  padding: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product-list {
+    gap: 1rem;
+    width: fit-content;
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.product-options {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  flex-direction: row;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    button {
+      position: relative;
+      top: 10px;
+      margin: 0 0 10px 10px;
   }
 }
+
+.product {
+    position: relative;
+    width: 250px;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    transition: all 0.3s;
+    
+    &:hover {
+      box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    
+    h1 {
+      color: #515151;
+      font-weight: 300;
+      margin: 0;
+      font-size: 30px;
+      font-weight: 300;
+    }
+  
+    h2 {
+      color: #515151;
+      margin: 0;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    
+    h4 { 
+      margin: 0;
+      color: #727272;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 12px
+    }
+    
+    p { 
+      font-size: 12px; 
+      line-height: 20px;
+      color: #727272;
+      margin: 0;
+    }
+}
+
+.product-special {
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(45deg);
+    right: -33px;
+    top: 33px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+  button {
+    margin-top: 10px;
+    line-height: 1;
+    height: 23px;
+    margin-right: 10px;
+  }
+
+  button:hover {
+    opacity: 0.8; 
+  }
+
+  button.active {
+    background: #93bbd1;
+  }
+
+  .product-form {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background: white;
+    padding: 20px;
+    gap: 8px;
+  }
